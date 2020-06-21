@@ -29,4 +29,9 @@ class KhachHang extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function LopHoc()
+    {
+        return $this->belongsTo('App\LopHoc','lop_hoc_id','id');
+    }
 }

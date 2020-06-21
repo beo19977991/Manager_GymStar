@@ -28,4 +28,15 @@ class HuanLuyenVien extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function LopHoc()
+    {
+        return $this->hasMany('App\LopHoc','huan_luyen_vien_id','id');
+    }
+
+    public function MonHoc()
+    {
+        return $this->belongsTo('App\MonHoc','id','mon_hoc_id');
+    }
 }

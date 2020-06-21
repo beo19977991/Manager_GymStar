@@ -22,3 +22,4 @@ Route::get('dang-nhap',function(){
 Route::get('dang-ky',function(){
     return view('users.dangky');
 });
+

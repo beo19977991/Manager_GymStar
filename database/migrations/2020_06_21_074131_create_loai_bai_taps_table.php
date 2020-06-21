@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBaiTapsTable extends Migration
+class CreateLoaiBaiTapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateBaiTapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bai_taps', function (Blueprint $table) {
+        Schema::create('loai_bai_taps', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('loai_bai_tap_id')->unsigned();
-            $table->integer('huan_luyen_vien_id')->unsigned();
-            $table->string('ten_bai_tap');
-            $table->string('video');
-            $table->longText('mo_ta_bai_tap');
+            $table->string('ten_loai_bai_tap');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateBaiTapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bai_taps');
+        Schema::dropIfExists('loai_bai_taps');
     }
 }
